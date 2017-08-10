@@ -1,6 +1,6 @@
 {
   "name": "bable_es6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -10,11 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "build": "babel --presets es2016 index.js -o bundle.js",
-
-    "preversion": "npm run test",
-    "version": "npm run build && git add -A dist",
+    "preversion": "npm run test && npm run build && git add -A dist",
+    "version": "",
     "postversion": "git push && git push --tags && npm publish && rm -rf build/temp",
-
     "go": "npm version patch -m 'Update patch  %s'",
     "gom": "npm version minor -m 'Update minor %s'",
     "gov": "npm version major -m 'Update major  %s'"
