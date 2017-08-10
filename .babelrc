@@ -1,4 +1,5 @@
 {
+  "presets": ["es2016"],
   "retainLines": true,
   "ecmaFeatures": {
     "generators": true
