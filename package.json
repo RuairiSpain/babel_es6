@@ -1,11 +1,21 @@
 {
   "name": "bable_es6",
-  "version": "1.0.0",
+  "version": "1.0.15",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RuairiSpain/babel_es6.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel --presets es2016 index.js -o bundle.js"
+    "test": "echo \"Error: no test specified\"",
+    "build": "babel index.js -o dist/bundle.js",
+    "preversion": "npm run test && npm run build && git add -A dist",
+    "version": "",
+    "postversion": "git push && git push --tags && npm publish && rm -rf build/temp",
+    "go": "npm version patch -m 'Update patch  %s'",
+    "gom": "npm version minor -m 'Update minor %s'",
+    "gov": "npm version major -m 'Update major  %s'"
   },
   "keywords": [],
   "author": "",
