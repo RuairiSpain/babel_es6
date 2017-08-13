@@ -1,7 +1,4 @@
 {
-  "presets": ["es2016", "flow"],
-  "retainLines": true,
-  "ecmaFeatures": {
-    "generators": true
-  }
+  "presets": ["es2016"],
+  "retainLines": true
 }
